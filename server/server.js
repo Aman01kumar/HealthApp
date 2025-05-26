@@ -6,7 +6,9 @@ require('dotenv').config();
 const authRoutes = require('./routes/authRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
 const recordRoutes = require('./routes/recordRoutes');
-
+app.use(cors({
+  origin: 'https://joyful-queijadas-6ac3b3.netlify.app'
+}));
 const app = express();
 app.use(cors());
 app.use(express.json());
